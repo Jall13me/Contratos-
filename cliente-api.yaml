@@ -1,0 +1,25 @@
+openapi: 3.0.3
+info:
+  title: Cliente Service API
+  version: 1.0.0
+  description: Microservicio encargado de la gestión de clientes
+
+servers:
+  - url: http://localhost:8081
+
+paths:
+
+  /clientes:
+    post:
+      summary: Registrar un nuevo cliente
+      tags:
+        - Clientes
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Cliente'
+      responses:
+        '201':
+          description: Cliente creado correctamente
