@@ -41,3 +41,11 @@ paths:
       responses:
         '200':
           description: Cliente actualizado
+
+    patch:
+      summary: Actualizar parcialmente cliente
+      tags: [ Clientes ]
+      responses:
+        '200':
+          description: Cliente modificado
+      
