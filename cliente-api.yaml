@@ -24,19 +24,20 @@ paths:
         '201':
           description: Cliente creado correctamente
 
-  /clientes/{id}:
     get:
-      summary: Obtener cliente por ID
-      tags:
-        - Clientes
-      parameters:
-        - name: id
-          in: path
-          required: true
-          schema:
-            type: integer
+      summary: Listar todos los clientes
+      tags: [Clientes]
       responses:
         '200':
-          description: Cliente encontrado
-        '404':
-          description: Cliente no encontrado
+          description: Lista de clientes
+    put:
+      summary: Actualizar cliente completo
+      tags: [ Clientes ]
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Cliente'
+      responses:
+        '200':
+          description: Cliente actualizado
