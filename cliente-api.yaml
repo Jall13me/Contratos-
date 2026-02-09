@@ -48,4 +48,10 @@ paths:
       responses:
         '200':
           description: Cliente modificado
-      
+
+    delete:
+      summary: Eliminar cliente
+      tags: [ Clientes ]
+      responses:
+        '204':
+          description: Cliente eliminado
